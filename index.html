@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Precio de la luz</title>
+</head>
+<body>
+    <header>
+<h1>
+    Calcule el coste de la energía consumida durante 1 hora, con el precio establecido en este momento
+</h1>
+<span id="current_date">
+    <script>
+        document.getElementById("current_date").innerHTML = Date();
+        </script>
+</span>
+    </header>
+    <main>
+<section>
+<!-- Espacio para seleccionar el número los electrodomésticos conectados. -->
+<h2> Seleccione los electrodomésticos conectados y la cantidad</h2>
+<form id="electro" action="get">
+<div class="nevera">
+<label>
+        <input type="checkbox" id ="nevera" name="nevera" value="300">Nevera
+</label> 
+</div>
+<div class="televisor">
+<label >
+    <input type="checkbox" id ="televisor" name="televisor" value="200">Televisor
+</label>
+</div >
+<div class="lavadora">
+<label >
+    <input type="checkbox" id ="lavadora" name="lavadora" value="200">Lavadora
+</label>
+</div >
+<div class="micro">
+<label >
+    <input type="checkbox" id ="micro" name="micro" value="700">Microondas
+</label>
+</div >
+<div class="cargador">
+<label >
+    <input type="checkbox" id ="cargador" name="cargador" value="5">Cargador móvil
+</label>
+</div class="vitro">
+<div class="vitro">
+<label >
+    <input type="checkbox" id ="vitro" name="vitro" value="900">Vitrocerámica
+</label>
+</div>
+<div class="tostadora">
+<label >
+    <input type="checkbox" id ="tostadora" name="tostadora" value="800">Tostadora
+</label>
+</div>
+<div class="aspir">
+<label >
+    <input type="checkbox" id ="aspir" name="aspir" value="800">Aspiradora
+</label>
+</div>
+<div class="secador">
+<label >
+    <input type="checkbox" id ="secador" name="secador" value="2000">Secador pelo
+</label>
+</div>
+<div class="aire">
+<label >
+    <input type="checkbox" id ="aire" name="aire" value="900">Aire acondicionado
+</label>
+</div>
+<div class="ordena">
+<label >
+    <input type="checkbox" id ="ordenador" name="ordenador" value="180">Ordenador
+</label>
+</div>
+</form>
+
+</section>
+<section>
+    <form method="get" name="electro">Electrodomésticos conectados:
+    <label for="electro">Seleccione los electrodomésticos conectados en este momento:</label>
+    <input type="checkbox" name="electro" id="electro">
+    <button>+</button>
+    </form>
+
+</section>
+
+    </main>
+    <footer>
+<button >Consultar coste</button>
+<p>Recuerde que sólo podrá realizar la consulta cada 5 minutos</p>
+    </footer>
+</body>
+</html>
