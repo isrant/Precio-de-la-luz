@@ -75,3 +75,105 @@ img {
   width: 80px;
   height: 80px;
 }
+
+
+.controlPotencia {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controlPotencia img {
+  width: 10rem;
+  height: 8rem;
+  border-radius: 20px;
+  /*   margin-right: 1rem; */
+}
+
+/* 
+div {
+  box-shadow: 1px 2px 10px gray;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 190px;
+  height: 190px;
+}
+div:hover {
+  box-shadow: 1px 2px 10px black;
+} */
+label {
+  padding: 1rem 0rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 2px 10px gray;
+  border-radius: 10px;
+  width: 190px;
+  height: 190px;
+  color: black
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid rgb(49, 48, 48);
+  color: rgb(49, 48, 48);
+  font-size: 0.9rem;
+  border-radius: 3px;
+  background-color: rgb(240, 236, 236);
+}
+
+footer {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer p {
+  color: rgb(115, 115, 185)e;
+  font-size: 2rem;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(115, 115, 185);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5%;
+}
+
+p#desglose {
+font-size: 1.5rem;
+color: rgb(115, 115, 185) ;
+}
+
+/* animaciones */
+
+@keyframes selected {
+  0% {
+    background-color: none;
+  }
+
+  50% {
+    transform: scale(1.2);
+    border: 6px solid rgb(149, 149, 197);
+  }
+
+  100% {
+    transform: scale(1);
+    border: 5px solid rgb(149, 149, 197);
+  }
+}
+
+input[type=checkbox]:checked+label {
+  animation-name: selected;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-delay: 1ms;
+}
