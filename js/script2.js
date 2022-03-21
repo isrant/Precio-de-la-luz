@@ -74,6 +74,7 @@ const handleCalcularButtonClick = async () => {
     } else {
       precioTotal.textContent =
         "Consumo total según elementos seleccionados : " + condecimales + "€/h";
+      desglose.textContent = "";
       for (let i = 0; i < array5.length; i++) {
         desglose.textContent += `\n Consumo ${array5[i]}: ${aparatoIndividual[
           i
