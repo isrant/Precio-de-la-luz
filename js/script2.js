@@ -36,3 +36,55 @@ async function getPrice() {
   }
   return price;
 }
+
+const calcularButton = document.querySelector("button#calcular");
+const handleCalcularButtonClick = async () => {
+  try {
+    let checks = document.querySelectorAll(".valores");
+    let price = await getPrice();
+    console.log("el precio actual de la luz es:", price + "€ MW/H");
+    // hago mis calculos
+    let array = [];
+    let array5 = [];
+    checks.forEach((e) => {
+      if (e.checked == true) {
+        array.push(e.value);
+        array5.push(e.name);
+      }
+    });
+    console.log(array);
+    console.log(array5);
+    const precioTotal = document.querySelector("#precioTotal");
+    const desglose = document.querySelector("#desglose");
+    let array2 = [];
+    let arrayValoresNum = array.forEach((elemento) => {
+      array2.push(Number(elemento));
+    });
+    let arraySumada = array2.reduce((acc, numero) => {
+      return acc + numero;
+    }, 0);
+    console.log("Array sumada", arraySumada);
+    let resultado = (arraySumada / 1000000) * price;
+    let aparatoIndividual = array.map(function (numb) {
+      return (numb * price) / 1000000;
+    });
+    let condecimales = resultado.toFixed(2);
+    if (arraySumada == 0) {
+      alert("Por favor, seleccione un electrodoméstico");
+    } else {
+      precioTotal.textContent =
+        "Consumo total según elementos seleccionados : " + condecimales + "€/h";
+      for (let i = 0; i < array5.length; i++) {
+        desglose.textContent += `\n Consumo ${array5[i]}: ${aparatoIndividual[
+          i
+        ].toFixed(2)} €/h`;
+        /*       desglose.textContent=
+        "aparatos conectados: " + array5 + ":" + aparatoIndividual + "€/Hora" ; */
+      }
+    }
+  } catch (error) {
+    // visualizar el error en la pagina
+    console.error(error.message);
+  }
+};
+calcularButton.addEventListener("click", handleCalcularButtonClick);
