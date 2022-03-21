@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/imagenes/neonPNG.ico.png" />
+  <title>Precio de la luz</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <section class="encabezado">
+      <img class="logo" src="../imagenes/neonPNG.png" alt="Bombilla">
+      <h1>PRECIO DE LA LUZ</h1>
+    </section>
+    <section>
+      <h2>INSTRUCCIONES DE USO</h2>
+      <p> Seleccione los aparatos que estén conectados en este momento y pulsar el botón <a href="#boton">Calcular</a>
+      </p>
+      <p> El resultado que indica la pantalla, es el importe a pagar durante una hora de uso con el precio actual de la
+        energia </p>
+    </section>
+  </header>
+  <form action="#" method="post">
+    <fieldset class="controlPotencia">
+      <input type="checkbox" name="AireAcondicionado" id="AireAcondicionado" value="1800" class="valores" />
+      <label for="AireAcondicionado">AIRE ACONDICIONADO <img src="/imagenes/aire_acondicionado.jpeg"
+          alt="Foto de Aire Acondicionado"></label>
+
+      <input type="checkbox" name="Aspiradora" id="Aspiradora" value="800" class="valores" />
+      <label for="Aspiradora">ASPIRADORA <img src="/imagenes/aspiradora.jpeg" alt="foto de Aspiradora"> </label>
+
+      <input type="checkbox" name="IA" id="IA" value="2" class="valores" />
+      <label for="IA">IA<img src="/imagenes/alexa_y_google.jpeg" alt="foto de Alexa&Google"></label>
+
+      <input type="checkbox" name="Batidora" id="Batidora" value="200" class="valores" />
+      <label for="Batidora">BATIDORA <img src="/imagenes/batidora.jpeg" alt="foto de Batidora"> </label>
+
+      <input type="checkbox" name="bombilla" id="bombilla" value="50" class="valores" />
+      <label for="bombilla">BOMBILLA <img src="/imagenes/bombilla.jpeg" alt="foto de bombilla"> </label>
+
+      <input type="checkbox" name="bombilla2" id="bombilla2" value="100" class="valores" />
+      <label for="bombilla2"> 2 BOMBILLAS <img src="/imagenes/bombilla2.jpg" alt="foto de 2 bombillas"> </label>
+
+      <input type="checkbox" name="bombilla3" id="bombilla3" value="150" class="valores" />
+      <label for="bombilla3"> 3 BOMBILLAS <img src="/imagenes/bombilla3.jpeg" alt="foto de  3 bombillas"> </label>
+
+      <input type="checkbox" name="bombilla4" id="bombilla4" value="200" class="valores" />
+      <label for="bombilla4">4 BOMBILLAS <img src="/imagenes/bombilla4.jpg" alt="foto de 4 bombillas"> </label>
+
+      <input type="checkbox" name="bombillaLed" id="bombillaLed" value="14" class="valores" />
+      <label for="bombillaLed">BOMBILLA LED <img src="/imagenes/bombilla_led.jpg" alt="foto de bombilla led">
+      </label>
+
+      <input type="checkbox" name="bombillaLed2" id="bombillaLed2" value="28" class="valores" />
+      <label for="bombillaLed2">2 BOMBILLAS LED <img src="/imagenes/bombilla_led2.jpeg" alt="foto de 2 bombillas led">
+      </label>
+
+      <input type="checkbox" name="bombillaLed3" id="bombillaLed3" value="42" class="valores" />
+      <label for="bombillaLed3">3 BOMBILLAS LED <img src="/imagenes/bombilla_led3.jpeg" alt="foto de bombilla led">
+      </label>
+
+      <input type="checkbox" name="bombillaLed4" id="bombillaLed4" value="56" class="valores" />
+      <label for="bombillaLed4"> 4 BOMBILLAS LED <img src="/imagenes/bombilla_led4.jpg" alt="foto de 4 bombillas led">
+      </label>
+
+      <input type="checkbox" name="Cafetera" id="Cafetera" value="900" class="valores" />
+      <label for="Cafetera">CAFETERA <img src="/imagenes/cafetera.jpeg" alt="foto de Cafetera"> </label>
+
+      <input type="checkbox" name="CampanaExtractora" id="CampanaExtractora" value="700" class="valores" />
+      <label for="CampanaExtractora">CAMPANA <img src="/imagenes/campana_extractora.jpeg"
+          alt="foto de Campana Extractora"> </label>
+
+      <input type="checkbox" name="CargadorDeMovil" id="CargadorDeMovil" value="4" class="valores" />
+      <label for="CargadorDeMovil">CARGADOR DE MÓVIL <img src="/imagenes/cargador_de_movil.jpeg"
+          alt="foto de cargador de movil"> </label>
+
+      <input type="checkbox" name="Freidora" id="Freidora" value="1100" class="valores" />
+      <label for="Freidora">FREIDORA <img src="/imagenes/freidora.jpeg" alt="foto de Freidora"> </label>
+
+      <input type="checkbox" name="Frigorifico" id="Frigorifico" value="300" class="valores" />
+      <label for="Frigorifico">FRIGORÍFICO <img src="/imagenes/frigorifico.jpeg" alt="foto de Frigorifico">
+      </label>
+
+      <input type="checkbox" name="HomeCinema" id="HomeCinema" value="150" class="valores" />
+      <label for="HomeCinema">HOME CINEMA <img src="/imagenes/home_cinema.jpeg" alt="foto de Home Cinema">
+      </label>
+
+      <input type="checkbox" name="Horno" id="Horno" value="2000" class="valores" />
+      <label for="Horno">HORNO <img src="/imagenes/horno.jpeg" alt="foto de Horno"></label>
+
+      <input type="checkbox" name="Lavadora" id="Lavadora" value="2000" class="valores" />
+      <label for="Lavadora">LAVADORA <img src="/imagenes/lavadora.jpeg" alt="foto de Lavadora"></label>
+
+      <input type="checkbox" name="Lavavajillas" id="Lavavajillas" value="2000" class="valores" />
+      <label for="Lavavajillas">LAVAVAJILLAS <img src="/imagenes/lavavajillas.jpeg" alt="foto de Lavavajillas"></label>
+
+      <input type="checkbox" name="MaquinaDeCortarElPelo" id="MaquinaDeCortarElPelo" value="15" class="valores" />
+      <label for="MaquinaDeCortarElPelo">MÁQUINA DE PELO <img src="/imagenes/maquina_de_cortar_el_pelo.jpeg"
+          alt="maquina de cortar el pelo"> </label>
+
+      <input type="checkbox" name="Microondas" id="Microondas" value="1500" class="valores" />
+      <label for="Microondas">MICROONDAS <img src="/imagenes/microondas.jpeg" alt="foto de Microondas"></label>
+
+
+      <input type="checkbox" name="Ordenador" id="Ordenador" value="250" class="valores" />
+      <label for="Ordenador">ORDENADOR <img src="/imagenes/ordenador.jpeg" alt="foto de Ordenador"> </label>
+
+      <input type="checkbox" name="PlanchaDeFreir" id="PlanchaDeFreir" value="1800" class="valores" />
+      <label for="PlanchaDeFreir">PLANCHA DE FREIR<img src="/imagenes/plancha_de_freir.jpeg"
+          alt="foto de plancha de freir"> </label>
+
+      <input type="checkbox" name="PlanchaDePlanchar" id="PlanchaDePlanchar" value="1600" class="valores" />
+      <label for="PlanchaDePlanchar">PLANCHA <img src="/imagenes/plancha_de_planchar.jpeg"
+          alt="foto de plancha de planchar"> </label>
+
+      <input type="checkbox" name="PlanchaDelPelo" id="PlanchaDelPelo" value="1600" class="valores" />
+      <label for="PlanchaDelPelo">PLANCHA DE PELO <img src="/imagenes/plancha_del_pelo.jpeg"
+          alt="foto de plancha del pelo"> </label>
+
+      <input type="checkbox" name="Radiador" id="Radiador" value="2000" class="valores" />
+      <label for="Radiador">RADIADOR <img src="/imagenes/radiador.jpeg" alt="foto de radiador"> </label>
+
+      <input type="checkbox" name="Radio" id="Radio" value="15" class="valores" />
+      <label for="Radio">RADIO <img src="/imagenes/radio.jpeg" alt="foto de Radio"></label>
+
+      <input type="checkbox" name="Router" id="Router" value="5" class="valores" />
+      <label for="Router">ROUTER <img src="/imagenes/router.jpeg" alt="foto de Router"> </label>
+
+      <input type="checkbox" name="Secadora" id="Secadora" value="2000" class="valores" />
+      <label for="Secadora">SECADORA <img src="/imagenes/secadora.jpeg" alt="foto de secadora"></label>
+
+      <input type="checkbox" name="SecadorDePelo" id="SecadorDePelo" value="2000" class="valores" />
+      <label for="SecadorDePelo">SECADOR DE PELO <img src="/imagenes/secador_de_pelo.jpeg"
+          alt="foto de secador de pelo"></label>
+
+      <input type="checkbox" name="Televisión" id="Televisión" value="400" class="valores" />
+      <label for="Televisión">TELEVISIÓN <img src="/imagenes/television.jpeg" alt="foto de Televisión"></label>
+
+      <input type="checkbox" name="Tostadora" id="Tostadora" value="800" class="valores" />
+      <label for="Tostadora">TOSTADORA <img src="/imagenes/tostadora.jpeg" alt="foto de Tostadora"></label>
+
+      <input type="checkbox" name="Ventilador" id="Ventilador" value="100" class="valores" />
+      <label for="Ventilador">VENTILADOR <img src="/imagenes/ventilador.jpeg" alt="foto de Ventilador"></label>
+
+      <input type="checkbox" name="vitrocerámica" id="vitrocerámica" value="2000" class="valores" />
+      <label for="vitrocerámica">VITROCERÁMICA <img src="/imagenes/vitroceramica.jpeg"
+          alt="foto de vitrocerámica"></label>
+
+      <input checked type="checkbox" name="otros" id="otros" value="100" class="valores" />
+      <label for="otros">GASTOS VAMPIRO<img src="/imagenes/Gastos_vampiro.jpeg"
+          alt="foto de otros gastos vampiro"></label>
+      <p class="botones">
+        <button type="button" id="calcular">Calcular</button>
+        <button type="reset" id="reset">Reset</button>
+      </p>
+    </fieldset>
+  </form>
+
+  <script type="module" src="/js/script2.js"></script>
+  <footer>
+    <p id="precioTotal"></p>
+    <!-- <a href="/html/index.html"> Reset </a> -->
+    <p id="desglose"></p>
+  </footer>
+</body>
+
+</html>
