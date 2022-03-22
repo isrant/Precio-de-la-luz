@@ -161,7 +161,7 @@ p#desglose {
 
 @keyframes selected {
   0% {
-    background-color: none;
+    background-color: white;
   }
 
   50% {
