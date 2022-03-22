@@ -16,6 +16,7 @@ body {
 }
 
 section.encabezado {
+  justify-content: center;
   height: 7rem;
   display: flex;
   align-items: center;
@@ -39,11 +40,11 @@ section {
 }
 
 h2 {
-  text-align: left;
+  padding-left: 3.5rem;
 }
 
 p {
-  text-align: left;
+  padding-left: 3.5rem;
 }
 
 fieldset {
@@ -101,7 +102,7 @@ label {
   border-radius: 10px;
   width: 190px;
   height: 190px;
-  color: black
+  color: black;
 }
 
 a {
@@ -116,9 +117,9 @@ a {
 footer {
   margin: 0rem;
   display: flex;
-  justify-content:left;
+  justify-content: left;
   gap: 0.5rem;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 footer p {
@@ -132,6 +133,7 @@ footer p#desglose {
 }
 
 button {
+  cursor: pointer;
   width: 150px;
   height: 50px;
   background-color: rgb(115, 115, 185);
@@ -140,17 +142,26 @@ button {
   font-weight: bold;
   border-radius: 5%;
 }
-
+.reset {
+  margin-left: 1rem;
+  background-color: rgb(115, 115, 185);
+  color: white;
+  padding: 13px 42px 13px 42px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5%;
+  box-shadow: 0 0 1px black;
+}
 p#desglose {
-font-size: 1.5rem;
-color: rgb(115, 115, 185) ;
+  font-size: 1.5rem;
+  color: rgb(115, 115, 185);
 }
 
 /* Animaciones */
 
 @keyframes selected {
   0% {
-    background-color:none;
+    background-color: none;
   }
 
   50% {
@@ -164,7 +175,7 @@ color: rgb(115, 115, 185) ;
   }
 }
 
-input[type=checkbox]:checked+label {
+input[type="checkbox"]:checked + label {
   animation-name: selected;
   animation-duration: 500ms;
   animation-timing-function: ease-out;
@@ -173,26 +184,41 @@ input[type=checkbox]:checked+label {
 
 /* Responsive */
 
-@media (max-width: 430px) {
-section> img {
-  width: 90px;
-  height: 90px;
-}
+@media (max-width: 475px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    padding: 0 1rem;
+  }
+  p {
+    padding: 0 1rem;
+  }
+
+  label {
+    text-align: center;
+    max-width: 7rem;
+    max-height: 8rem;
+    margin: 1rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  label > img {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
 
   header {
     font-size: 12px;
-
-}
+  }
   label {
     padding: 1rem 0rem;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 1px 2px 10px gray;
     border-radius: 10px;
-    width: 190px;
-    height: 190px;
-    color: black
+    width: 150px;
+    height: 150px;
+    color: black;
   }
 }
