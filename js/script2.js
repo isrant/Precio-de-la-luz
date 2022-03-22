@@ -42,8 +42,8 @@ const handleCalcularButtonClick = async () => {
   try {
     let checks = document.querySelectorAll(".valores");
     let price = await getPrice();
-    console.log("el precio actual de la luz es:", price + "€ MW/H");
-    // hago mis calculos
+    console.log("El precio actual de la luz es:", price + "€ MW/H");
+    // Cálculos para obtener el coste según aparatos seleccionados
     let array = [];
     let array5 = [];
     checks.forEach((e) => {
@@ -52,8 +52,6 @@ const handleCalcularButtonClick = async () => {
         array5.push(e.name);
       }
     });
-    console.log(array);
-    console.log(array5);
     const precioTotal = document.querySelector("#precioTotal");
     const desglose = document.querySelector("#desglose");
     let array2 = [];
@@ -63,7 +61,7 @@ const handleCalcularButtonClick = async () => {
     let arraySumada = array2.reduce((acc, numero) => {
       return acc + numero;
     }, 0);
-    console.log("Array sumada", arraySumada);
+
     let resultado = (arraySumada / 1000000) * price;
     let aparatoIndividual = array.map(function (numb) {
       return (numb * price) / 1000000;
@@ -79,12 +77,10 @@ const handleCalcularButtonClick = async () => {
         desglose.textContent += `\n Consumo ${array5[i]}: ${aparatoIndividual[
           i
         ].toFixed(2)} €/h`;
-        /*       desglose.textContent=
-        "aparatos conectados: " + array5 + ":" + aparatoIndividual + "€/Hora" ; */
       }
     }
   } catch (error) {
-    // visualizar el error en la pagina
+    // Visualizar el error en la pagina
     console.error(error.message);
   }
 };
